@@ -1,0 +1,39 @@
+{
+  "name": "CustomerInterest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "user_id": {
+      "type": "number",
+      "required": true
+    },
+    "interest_text": {
+      "type": "string",
+      "required": true
+    },
+    "cdate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "customerId"
+    },
+    "interest": {
+      "type": "belongsTo",
+      "model": "Interest",
+      "foreignKey": "interestId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

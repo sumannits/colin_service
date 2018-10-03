@@ -1,0 +1,35 @@
+{
+  "name": "reportabuse",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "reportedby": {
+      "type": "number",
+      "required": true
+    },
+    "reportedagainst": {
+      "type": "number",
+      "required": true
+    },
+    "reporttype": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "reportdate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

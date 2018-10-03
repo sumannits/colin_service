@@ -1,0 +1,32 @@
+{
+  "name": "CommunityUser",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "community_id": {
+      "type": "number",
+      "required": true
+    },
+    "cdate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    },
+    "community": {
+      "type": "belongsTo",
+      "model": "community",
+      "foreignKey": "community_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

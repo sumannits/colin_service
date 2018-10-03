@@ -1,0 +1,29 @@
+{
+  "name": "EventInterest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "event_id": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "interest": {
+      "type": "belongsTo",
+      "model": "Interest",
+      "foreignKey": ""
+    },
+    "eventdet": {
+      "type": "belongsTo",
+      "model": "events",
+      "foreignKey": "event_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

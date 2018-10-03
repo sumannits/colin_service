@@ -1,0 +1,191 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "../node_modules/loopback-component-passport/lib/models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mysql"
+  },
+  "AccessToken": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mysql",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "Admin": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Customer": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "CMS": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Faq": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Setting": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "IntroSlider": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "container": {
+    "dataSource": "storage",
+    "public": true
+  },
+  "asset": {
+    "dataSource": "db",
+    "public": true
+  },
+  "demo": {
+    "dataSource": "storage",
+    "public": true
+  },
+  "EmailSend": {
+    "dataSource": "emailDataSource",
+    "public": true
+  },
+  "UserTemp": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "UserIdentity": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "UserCredential": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Skill": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "user-location": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "rating": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Interest": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "emailtemplate": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "pushnotification": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "word": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "community": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "CustomerInterest": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "CommunityUser": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "CommunityInterest": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "events": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "EventUser": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "UserGroup": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "GroupInterest": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "GroupUser": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "CustomerActivity": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "EventInterest": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "reportabuse": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "report": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "groupchat": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "community_node": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "NodeInterest": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "NodeUser": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "InterestMultiple": {
+    "dataSource": "mysql",
+    "public": true
+  }
+}

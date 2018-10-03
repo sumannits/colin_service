@@ -1,0 +1,32 @@
+{
+  "name": "EventUser",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "event_id": {
+      "type": "number",
+      "required": true
+    },
+    "cdate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    },
+    "eventdet": {
+      "type": "belongsTo",
+      "model": "events",
+      "foreignKey": "event_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

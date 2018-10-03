@@ -1,0 +1,29 @@
+{
+  "name": "GroupUser",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "group_id": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    },
+    "groupdet": {
+      "type": "belongsTo",
+      "model": "UserGroup",
+      "foreignKey": "group_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

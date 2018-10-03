@@ -1,0 +1,27 @@
+{
+  "name": "InterestMultiple",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "interest_pid": {
+      "type": "number",
+      "required": true
+    },
+    "cdate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "interest": {
+      "type": "belongsTo",
+      "model": "Interest",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

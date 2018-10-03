@@ -1,0 +1,32 @@
+{
+  "name": "CommunityInterest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "community_id": {
+      "type": "number",
+      "required": true
+    },
+    "cdate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "interest": {
+      "type": "belongsTo",
+      "model": "Interest",
+      "foreignKey": ""
+    },
+    "community": {
+      "type": "belongsTo",
+      "model": "community",
+      "foreignKey": "community_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

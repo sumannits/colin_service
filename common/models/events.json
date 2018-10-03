@@ -1,0 +1,56 @@
+{
+  "name": "events",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "event_date": {
+      "type": "date"
+    },
+    "created_at": {
+      "type": "date"
+    },
+    "updated_at": {
+      "type": "date"
+    },
+    "is_active": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "grpinterest": {
+      "type": "hasMany",
+      "model": "EventInterest",
+      "foreignKey": "event_id"
+    },
+    "eventuser": {
+      "type": "hasMany",
+      "model": "EventUser",
+      "foreignKey": "event_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

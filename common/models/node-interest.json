@@ -1,0 +1,28 @@
+{
+  "name": "NodeInterest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cdate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "interest": {
+      "type": "belongsTo",
+      "model": "Interest",
+      "foreignKey": ""
+    },
+    "nodedet": {
+      "type": "belongsTo",
+      "model": "community_node",
+      "foreignKey": "node_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

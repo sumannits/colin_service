@@ -1,0 +1,46 @@
+{
+  "name": "Interest",
+  "plural": "interests",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "is_pid": {
+      "type": "number"
+    },
+    "user_id": {
+      "type": "number"
+    },
+    "is_active": {
+      "type": "boolean"
+    },
+    "is_hidden": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "type": "date"
+    },
+    "updated_at": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "grpinterest": {
+      "type": "hasMany",
+      "model": "InterestMultiple",
+      "foreignKey": "interest_pid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

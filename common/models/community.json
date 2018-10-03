@@ -1,0 +1,53 @@
+{
+  "name": "community",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "community_type": {
+      "type": "number"
+    },
+    "location": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean"
+    },
+    "created_at": {
+      "type": "date"
+    },
+    "updated_at": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "grpinterest": {
+      "type": "hasMany",
+      "model": "CommunityInterest",
+      "foreignKey": "community_id"
+    },
+    "user": {
+      "type": "hasMany",
+      "model": "CommunityUser",
+      "foreignKey": "community_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,31 @@
+{
+  "name": "NodeUser",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cdate": {
+      "type": "date"
+    },
+    "community_id": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    },
+    "nodedet": {
+      "type": "belongsTo",
+      "model": "community_node",
+      "foreignKey": "node_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
