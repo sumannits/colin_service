@@ -1,61 +1,60 @@
 {
-    "name": "UserGroup",
-    "base": "PersistedModel",
-    "idInjection": true,
-    "options": {
-      "validateUpsert": true
+  "name": "UserGroup",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
     },
-    "properties": {
-      "name": {
-        "type": "string",
-        "required": true
-      },
-      "description": {
-        "type": "string"
-      },
-      "image": {
-        "type": "string"
-      },
-      "location": {
-        "type": "string"
-      },
-      "loc_lat": {
-        "type": "string"
-      },
-      "loc_long": {
-        "type": "string"
-      },
-      "user_id": {
-        "type": "number"
-      },
-      "is_pgroup_id": {
-        "type": "number"
-      },
-      "is_active": {
-        "type": "boolean",
-        "default": true
-      },
-      "cdate": {
-        "type": "date"
-      },
-      "last_activity": {
-        "type": "date"
-      }
+    "description": {
+      "type": "string"
     },
-    "validations": [],
-    "relations": {
-      "grpinterest": {
-        "type": "hasMany",
-        "model": "GroupInterest",
-        "foreignKey": "group_id"
-      },
-      "grpuser": {
-        "type": "hasMany",
-        "model": "GroupUser",
-        "foreignKey": "group_id"
-      }
+    "image": {
+      "type": "string"
     },
-    "acls": [],
-    "methods": {}
-  }
-  
+    "location": {
+      "type": "string"
+    },
+    "loc_lat": {
+      "type": "string"
+    },
+    "loc_long": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "number"
+    },
+    "is_pgroup_id": {
+      "type": "number"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "cdate": {
+      "type": "date"
+    },
+    "last_activity": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "grpinterest": {
+      "type": "hasMany",
+      "model": "GroupInterest",
+      "foreignKey": "group_id"
+    },
+    "grpuser": {
+      "type": "hasMany",
+      "model": "GroupUser",
+      "foreignKey": "group_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

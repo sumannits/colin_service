@@ -1,0 +1,40 @@
+{
+  "name": "comments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "message": {
+      "type": "string",
+      "required": true
+    },
+    "cdate": {
+      "type": "date"
+    },
+    "is_delete": {
+      "type": "boolean",
+      "default": false
+    },
+    "type": {
+      "type": "number"
+    },
+    "typepid": {
+      "type": "number"
+    },
+    "is_parent": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

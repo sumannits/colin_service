@@ -187,5 +187,13 @@
   "InterestMultiple": {
     "dataSource": "mysql",
     "public": true
+  },
+  "comments": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "comment_like": {
+    "dataSource": "mysql",
+    "public": true
   }
 }
