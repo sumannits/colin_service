@@ -81,4 +81,39 @@ module.exports = function(Eventuser) {
         ],
         returns: {arg: 'response', type: 'object'}
     });
+
+    Eventuser.deletea = function(data,cb){
+        var response = {};
+        var grpId=data['event_id'];
+        var customerId=data['customerId'];
+        if(grpId && customerId) {  
+            Eventuser.remove({ "event_id": grpId,"customerId": customerId }, (err1, res1) => {
+                if (err1) {
+                    response.type = "error";
+                    response.message = err;
+                    cb(null, response);
+                } else {
+                    response.type = "success";
+                    response.message = 'deleted success';
+                    cb(null, response);
+                }
+            })
+        }else{
+            response.type = "error";
+            response.message = "Plesae give proper data.";
+            cb(null, response);
+        }
+    }
+
+    Eventuser.remoteMethod('deletea', {
+        http: {path: '/deletegrpc', verb: 'post'},
+        accepts: [
+        {
+            arg: 'data',
+            type: 'object',
+            http: { source: 'body' }
+        }
+        ],
+        returns: {arg: 'response', type: 'object'}
+    });
 };
